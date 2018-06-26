@@ -20,6 +20,9 @@ const styles = {
   },
   button: {
     position: 'absolute',
+    top: '700px',
+    left: '1530px',
+    zIndex: '1',
   }
 };
 
@@ -44,7 +47,14 @@ class FullScreenDialog extends React.Component {
     const { classes } = this.props;
     return (
       <div>
-        <Button variant="fab" color="primary" aria-label="add" className={classes.button} onClick={this.handleClickOpen}><AddIcon /></Button>
+        <Button 
+          variant="fab" 
+          color="primary" 
+          aria-label="add" 
+          className={classes.button} 
+          onClick={this.handleClickOpen}>
+          <AddIcon />
+        </Button>
         <Dialog
           fullScreen
           open={this.state.open}
@@ -53,14 +63,21 @@ class FullScreenDialog extends React.Component {
         >
           <AppBar className={classes.appBar}>
             <Toolbar>
-              <IconButton color="inherit" onClick={this.handleClose} aria-label="Close">
+              <IconButton 
+                color="inherit" 
+                onClick={this.handleClose} 
+                aria-label="Close">
                 <CloseIcon />
               </IconButton>
               <Typography variant="title" color="inherit" className={classes.flex}>
                 Add Workout
               </Typography>
-              <Button color="inherit" onClick={this.handleClose}>
-                save
+              <Button 
+                color="inherit" 
+                onClick={this.handleClose}
+                className='fr'
+              >
+                Save
               </Button>
             </Toolbar>
           </AppBar> 

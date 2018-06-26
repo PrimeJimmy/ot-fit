@@ -19,31 +19,11 @@ const styles = theme => ({
   },
 });
 
-const currencies = [
-  {
-    value: 'USD',
-    label: '$',
-  },
-  {
-    value: 'EUR',
-    label: '€',
-  },
-  {
-    value: 'BTC',
-    label: '฿',
-  },
-  {
-    value: 'JPY',
-    label: '¥',
-  },
-];
-
 class TextFields extends React.Component {
   state = {
-    name: 'Cat in the Hat',
+    name: '',
     age: '',
-    multiline: 'Controlled',
-    currency: 'EUR',
+    multiline: '',
   };
 
   handleChange = name => event => {
@@ -68,23 +48,14 @@ class TextFields extends React.Component {
         <TextField
           id="uncontrolled"
           label="Uncontrolled"
-          defaultValue="foo"
+          defaultValue=""
           className={classes.textField}
           margin="normal"
         />
         <TextField
-          required
           id="required"
           label="Required"
-          defaultValue="Hello World"
-          className={classes.textField}
-          margin="normal"
-        />
-        <TextField
-          error
-          id="error"
-          label="Error"
-          defaultValue="Hello World"
+          defaultValue=""
           className={classes.textField}
           margin="normal"
         />

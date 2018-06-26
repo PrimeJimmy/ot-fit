@@ -2,14 +2,20 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import Appbar from './Components/Appbar';
-import MyCalendar from './Components/Calendar';
+import Workouttracker from './Components/Workouttracker';
+import Addevent from './Components/Addevent';
 import registerServiceWorker from './registerServiceWorker';
+import 'tachyons';
+
 
 
 ReactDOM.render(
 	<div>
-	<Appbar />
-	<MyCalendar />
+	<article>
+		<Appbar />
+		<Workouttracker />
+		<Addevent />
+	</article>	
 	</div>
 , document.getElementById('root'));
 registerServiceWorker();
