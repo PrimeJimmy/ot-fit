@@ -1,15 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import Appbar from './Components/Appbar';
-import MyCalendar from './Components/Calendar';
+import App from './App';
 import registerServiceWorker from './registerServiceWorker';
+import 'tachyons';
 
 
-ReactDOM.render(
-	<div>
-	<Appbar />
-	<MyCalendar />
-	</div>
-, document.getElementById('root'));
+
+ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
